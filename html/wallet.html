@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="add page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>dineroSR wallet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="../style/wallet.css"> 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../firebase/firebaseregister.js"></script> -->
+    <script src="../script/wallet.js"></script>
+</head>
+
+<body>
+
+  <!-- Wallet Section -->
+<div id="wallet">
+  <h2>Wallet</h2>
+  <!-- Add Bank Details Form -->
+  <form id="bankForm">
+      <input type="text" id="accountName" placeholder="Account Holder Name" required>
+      <input type="text" id="accountNumber" placeholder="Account Number" required>
+      <input type="text" id="bankName" placeholder="Bank Name" required>
+      <input type="text" id="ifscCode" placeholder="IFSC Code" required>
+      <button type="submit">Add Account</button>
+  </form>
+  
+      <!-- Display Account Details -->
+      <div id="accountDetails"></div>
+  
+      <!-- UPI Payment Form -->
+      <form id="upiForm">
+          <input type="text" id="upiId" placeholder="UPI ID" required>
+          <input type="number" id="upiAmount" placeholder="Amount" required>
+          <button type="submit">Pay via UPI</button>
+      </form>
+  
+      <!-- Bank Payment Form -->
+      <form id="bankPaymentForm">
+          <input type="text" id="payeeAccountNumber" placeholder="Payee Account Number" required>
+          <input type="text" id="payeeBankName" placeholder="Payee Bank Name" required>
+          <input type="number" id="amount" placeholder="Amount" required>
+          <button type="submit">Transfer</button>
+      </form>
+  
+      <!-- Transaction History -->
+      <h3>Transaction History</h3>
+      <div id="transactionHistory"></div>
+  </div>
+  
+ 
+  
+  </body>
+  </html>
+</html>
+  
+</html>

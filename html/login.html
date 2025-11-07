@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <meta name="description" content="login form">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!-- <meta http-equiv="refresh" content="600"> -->
+    <title>dineroSR signin</title>
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <div class="logo">
+        <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+    </div>
+    <div class="formarea">
+            <table>
+                <form action="/login" id="login" onsubmit="return submitForm()" method="post" name="myform">
+                    <tr>
+                        <th colspan="4" class="p">Sign in</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="span"><span id="invalid"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cId">Mobile No. : </label>
+                        </td>
+                        <td colspan="2">
+                            <input type="tel" placeholder="Number" name="contact" class="int" id="cId" onblur="updateValue(this.value)" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="emailin">Email: </label>
+                        </td>
+                        <td colspan="2">
+                            <input type="email" name="email" placeholder="Email address" class="emaili" id="emailin" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Passin">Password: </label>
+                        </td>
+                        <td class="eye">
+                            <div class="eye">
+                                <input type="password" name="password" placeholder="password" class="int" id="Passin" required /><img src="img/bulbo.png" alt="show" class="imgb" onclick="show()">
+                            </div>
+                                <!-- <input type="button" value="Show" class="sh" id="s" onclick="show()"> -->
+                            <!-- <input type="button" class="btn-show" value="Show" id="s" onclick="show()" /> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <button type="submit" class="btn">submit</button>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td colspan="4" class="b">
+                            <button type="reset" value="reset" class="btn">reset</button>
+                        </td>
+                    </tr> -->
+
+                    <tr>
+                        <td colspan="4" class="reg">
+                            <label>Need a Account: <a href="register.html">Register Now</a></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="reg">
+                            <label><a href="#" class="for">Forget Password</a></label>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>\
+    <!-- <script src="./firebase/firebaseregister.js"></script>
+    <script src="./firebase/login.js"></script> -->
+    <!-- <script src="./script/login.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="viewbill page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>dineroSR viewbills</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="../style/view.css">
+</head>
+
+<body>
+    <div class="logo">
+        <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+    </div>
+    <div class="container-fluid">
+        <h1 class="h1">View History</h1>
+        <div class="row">
+            <div class="col-6" id="col">
+                <label>customer email:&nbsp; </label><label class="id" id="emailInput"></label>
+            </div>
+            <div class="col-6" id="col">
+                <label>Name:&nbsp; </label><label class="name" id="nameInput"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6" id="col">
+                <label>ph no. :&nbsp; </label><label class="number" id="phoneInput">0123456789</label>
+            </div>
+            <div class="col-6" id="col">
+                <label>type:&nbsp; </label><label class="type">customer</label>
+            </div>
+        </div>
+        <div class="row" id="input">
+            <i class="fa fa-calendar" aria-hidden="true" id="fa"></i><select name="date" id="selectdate">
+                <option value="today">today</option>
+                <option value="yesterday">yesterday</option>
+                <option value="7">last 7 days</option>
+                <option value="custom">custom date</option>
+            </select>
+        </div>
+        <div class="row" id="customdate">
+            <div class="col-12" id="cus">
+                <input type="date" id="first"><input type="date" id="second">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="views-div">
+                <button type="button" id="search">search</button>
+            </div>
+        </div>
+        <div class="row" id="total">
+            <label>Total amount: </label><label class="bal">2000</label>
+        </div>
+        <div class="row" id="total">
+            <label>Transactions: </label><label class="trans">1</label>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row" id="Transactions">
+            
+        </div>
+        <div class="row" id="no">
+            <label class="no">no more transactions</label>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="row" id="no">
+            <label class="no">no transactions</label>
+        </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./firebase/firebaseregister.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script/view.js"></script>
+</body>
+</html>

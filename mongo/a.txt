@@ -1,0 +1,18 @@
+const express=require("express");
+require("./index1")
+require("./getfile")
+const app=express();
+const body1=require('body-parser');
+const Student1=require("./index1");
+const encoded=body1.urlencoded({extended:false});
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname+ "/register.html");
+})
+app.post('/register',encoded,async(req,res)=>{
+    let student = await Student1(req.body);
+    student.save()
+    .then(()=>{
+        res.send(`user register successfully!`);
+    })
+    .catch((err)=>console.log(err));
+})

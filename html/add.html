@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="add page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>Money Add</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="../style/add.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="body">
+        <form action="/add" method="post">
+            <div class="row" id="header">
+                <div class="col-2">
+                    <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-4" id="d">
+                    <label for="date" id="date-font">Date:&nbsp;</label>
+                    <input name="Date" value="" id="date" disabled>
+                </div>
+            </div>
+            <hr>
+            <h1>Invoice</h1>
+            <div class="row">
+                <div class="col-6" id="bill-con">
+                    <label id="bill">
+                        Bill to:
+                    </label><br>
+                    <input type="text" placeholder="Name of client" id="address"><br>
+                    <input type="text" placeholder="Address of the client" id="address"><br>
+                    <input type="number" minlength="10" placeholder="Contact details" id="address">
+                </div>
+                <div class="col-6" id="bill-con">
+                    <label id="bill">
+                        Bill from:
+                    </label><br>
+                    <input type="text" placeholder="Name of lender" id="address"><br>
+                    <input type="text" placeholder="Address of the lender" id="address"><br>
+                    <input type="number" minlength="10" placeholder="Contact details" id="address">
+                </div>
+                <br>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-7" id="font">
+                    <label>
+                        ITEM
+                    </label>
+                </div>
+                <div class="col-1" id="font">
+                    <label id="q">
+                        QTY
+                    </label>
+                </div>
+                <div class="col-2" id="font">
+                    <label id="r">
+                        PRICE/RATE
+                    </label>
+                </div>
+                <div class="col-1" id="font">
+                    <label id="hide">
+                        ACTION
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div id="item-area">
+                    <div class="row" id="addelement">
+                        <div class="col-7" id="item">
+                            <input type="text" placeholder="Enter the name of the item">
+                        </div>
+                        <div class="col-1" id="item">
+                            <input type="number" placeholder="0" class="qty" id="price">
+                        </div>
+                        <div class="col-2" id="item">
+                            <i class="fa fa-inr" id="ru"></i><input type="number" placeholder="0.0" class="rate"
+                                id="price">
+                        </div>
+                        <div class="col-1" id="item">
+                            <button type="button" onclick="removeParentDiv(this)" id="delete"><i class="fa fa-trash"
+                                    id="dustbin" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="next">
+                    <button type="button" class="btn btn-primary" id="addnew">add item</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="di">
+                <div class="col-6" id="it">
+                    <label id="date-font">Tax Rate: </label>
+                    <input type="number" class="tax" placeholder="0.0" id="price">
+                    <i class="fa fa-percent" aria-hidden="true" id="per"></i>
+                </div>
+                <div class="col-6" id="it-d">
+                    <label id="date-font">Discount Rate: </label>
+                    <input type="number" class="discount" placeholder="0.0" id="price">
+                    <i class="fa fa-percent" aria-hidden="true" id="per"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="calcu">
+                <button type="button" class="btn btn-primary" id="cal">calculate</button>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-3">
+                    <label id="date-font">
+                        Sub-total:
+                    </label>
+                    <br />
+                    <label id="date-font">
+                        Discount(<label class="diso" id="date-font">0</label>%):
+                    </label><br />
+                    <label id="date-font">
+                        Tax(<label class="taxo" id="date-font">0</label>%):
+                    </label>
+                </div>
+                <div class="col-2" id="rupee-acc">
+                    <i class="fa fa-inr" id="rupee"></i>
+                    <br />
+                    <i class="fa fa-inr" id="rupee"></i>
+                    <br />
+                    <i class="fa fa-inr" id="rupee"></i>
+                </div>
+                <div class="col-2">
+                    <label class="subout" id="date-font">0</label><br />
+                    <label class="disout" id="date-font">0</label><br />
+                    <label class="taxout" id="date-font">0</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-7">
+                    <hr>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-3">
+                    <label id="date-font">
+                        Total:
+                    </label>
+                </div>
+                <div class="col-2" id="rupee-acc">
+                    <i class="fa fa-inr" id="rupee"></i>
+                </div>
+                <div class="col-2">
+                    <input class="grandout" value="" name="Total" id="gfont" disabled>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <hr>
+            <div>
+                <label id="date-font">Notes:</label>
+                <br>
+                <textarea placeholder="Thanks for the Business" id="text-box" cols="30" rows="10"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2" id="print">
+                    <button class="btn btn-primary" id="print-btn">Print</button>
+                </div>
+                <div class="col-2" id="print">
+                    <a href="/add"><button type="submit" class="btn btn-primary" id="save-btn">Save</button></a>
+                </div>
+                <div class="col-2" id="print">
+                    <a href="../html/payment.html"><button class="btn btn-primary" id="payment-btn">Payment</button></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../firebase/firebaseregister.js"></script> -->
+    <script src="../script/add.js"></script>
+</body>
+
+</html>

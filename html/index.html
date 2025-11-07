@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="index page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>dineroSR</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+    <link type="text/css" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body >
+    <div class="container-fluid" id="header">
+        <div class="row">
+            <div class="col-2">
+                <a href="#"><img src="img/snas-logo.png" alt="no image" id="logoicon" /></a>
+            </div>
+            <div class="col-5">
+                <!-- <input type="search" placeholder="search" class="search" id="sch"/> -->
+            </div>
+            <div class="col-5" id="login">
+                <a href="wallet.html"><input type="button" value="+0.0" class="wall"></a>
+                <a href="register.html">
+                    <button type="button" class="btn-sign">sign up</button>
+                </a>
+                <a href="login.html">
+                    <button type="button" class="btn-sign">sign in</button>
+                </a>
+            </div>
+            <div class="col-5" id="logout">
+                <a href="wallet.html"><input type="button" value="+0.0" class="wall"></a>
+                <button type="button" onclick="logout()" class="btn-sign">sign out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="nav">
+            <ul>
+                <a href="index.html">
+                    <li class="li">HOME</li>
+                </a>
+                <a href="#bottom">
+                    <li class="li">ABOUT US</li>
+                </a>
+                <a href="add.html">
+                    <li class="li">ADD BILL</li>
+                </a>
+                <a href="view.html">
+                    <li class="li">VIEW BILLS</li>
+                </a>
+                <a href="payment.html">
+                    <li class="li">MAKE PAYMENT</li>
+                </a>
+                <a href="notification.html">
+                    <li class="li">NOTIFICATIONS</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="body">
+        <div class="row" id="body-row">
+            <div class="col-4" id="body-img">
+                <a href="add.html">
+                    <div class="body-imag">
+                        <img src="img/add.png" class="icon" alt="add image" id="add" />
+                        <label for="add" id="a">Add Bill</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="view.html">
+                    <div class="body-imag">
+                        <img src="img/view.png" class="icon" alt="view image" id="view" />
+                        <label for="view" id="a">View Bills</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="phone.html">
+                    <div class="body-imag">
+                        <img src="img/pay.png" class="icon" alt="pay image" id="mobilerec" />
+                        <label for="mobilerec" id="a">Mobile Recharge</label>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="body-row">
+            <div class="col-4" id="body-img">
+                <a href="payment.html">
+                    <div class="body-imag">
+                        <img src="img/payment.png" class="icon" alt="pay image" id="payment" />
+                        <label for="payment" id="a">Make payment</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="wallet.html">
+                    <div class="body-imag">
+                        <img src="img/wallet.png" class="icon" alt="wallet image" id="wallet" />
+                        <label for="wallet" id="a">wallet</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="notification.html">
+                    <div class="body-imag">
+                        <img src="img/images.png" class="icon" alt="pay image" id="notification" />
+                        <label for="notification" id="a">Notification</label>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="body-row">
+            <div class="col-4" id="body-img">
+                <a href="/profile">
+                    <div class="body-imag">
+                        <img src="img/acc.png" class="icon" alt="account image" id="profile" />
+                        <label for="profile" id="a">My Account</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="lander.html">
+                    <div class="body-imag">
+                        <img src="img/len.png" class="icon" alt="pay image" id="lender" />
+                        <label for="lender" id="a">change lander</label>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4" id="body-img">
+                <a href="feedback.html">
+                    <div class="body-imag">
+                        <img src="img/com.png" class="icon" alt="feedback image" id="feed" />
+                        <label for="feed" id="a">Feedback</label>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bottom">
+        <div class="container-fluid" id="bottom">
+            <div class="row">
+                <div class="col-4">
+                    <div class="info">
+                        <h4>Moneylender record application</h4>
+                        <p>
+                            This website is to keep the record of the lender and update the
+                            client every month. So, that the record the not lost and the
+                            client can have clear check on the loan he his from the lender.
+                            And pay the lender the amount in the given time.
+                        </p>
+                    </div>
+                    <div class="footer-img">
+                        <a href="https://wa.me/9366050184" target="_blank"><i class="fa fa-whatsapp" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://telegram.org/" target="_blank"><i class="fa fa-telegram" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" id="fa"
+                                aria-hidden="true"></i></a>
+                        <a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square" id="fa"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <h4>company</h4>
+                    <li id="about">About Us</li>
+                    <li id="about">Careers</li>
+                    <li id="about">Blog</li>
+                    <li id="about">Newsroom</li>
+                    <li id="about">Lending Partner</li>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-4" id="contact">
+                    <h4>We'd love to hear from you!</h4>
+                    <span class="text">You can reach out to us at: </span>
+                    <br />
+                    <br />
+                    <li><a href="tel:0123456789"><i class="fa fa-phone" id="fa" aria-hidden="true"></i><label
+                                class="abo">+91-0123456789</label></a></li>
+                    <li><a href="mailto:helloworlddie2000@gmail.com"><i class="material-icons" id="fa"
+                                aria-hidden="true">mail</i><label class="abo">helloworlddie2000@gmail.com</label></a>
+                    </li>
+                    <li><a href="https://www.google.com/maps/place/Lovely+Professional+University/@31.2574048,75.7003231,16.25z/data=!4m10!1m2!2m1!1sLovely+Professional+University!3m6!1s0x391a5f5c18f4e6fd:0x8c2fdcbae05c63d2!8m2!3d31.260591!4d75.707565!15sCh5Mb3ZlbHkgUHJvZmVzc2lvbmFsIFVuaXZlcnNpdHkiA4gBAZIBCGJ1c19zdG9w4AEA!16s%2Fg%2F11g3gpn682?entry=ttu"
+                            target="_blank"><i class="fa fa-map-marker" id="fa" aria-hidden="true"></i>
+                            <label class="abo"> Lovely Professional University, Phagwara, Punjab- 144411</lebal>
+                        </a></li>
+                </div>
+            </div>
+            <div class="row" id="bot">
+                <div class="col-4">
+                    <div class="copyright">
+                        <span>&copy</span><span> 2024 SNAS & RMC, Inc. All rights reserved.</span>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <ul class="terms">
+                        <a href="term.html">
+                            <li class="ul">Terms & Conditions</li>
+                        </a>
+                        <a href="term.html">
+                            <li class="ul">Privacy Policy</li>
+                        </a>
+                        <a href="term.html">
+                            <li class="ul">Lending T&C</li>
+                        </a>
+                        <a href="term.html">
+                            <li class="ul">Grievances & Redressal</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./firebase/firebaseregister.js"></script> -->
+    <script src="../script/index.js"></script>
+</body>
+</html>

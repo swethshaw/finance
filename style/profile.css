@@ -1,0 +1,183 @@
+
+        #logoicon {
+            height: 35px;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff;
+            /* color: #333333; */
+            /* padding: 0; */
+            /* align-items: center;
+            height: 100vh; */
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 30px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .profile-details {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-details h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        #profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #C0C0C0;
+            background-color: #e6e6e6;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #333333;
+            cursor: pointer;
+            position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #profile-picture:after {
+            content: 'No Image';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333333;
+            font-size: 1em;
+            pointer-events: none;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        select,
+        input[type="text"],
+        input[type="file"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        select{
+            color: black;
+            text-align: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #genderInput,#state{
+            width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .delete{
+            display: flex;
+            justify-content: center;
+        }
+        #edit{
+            margin-right: 20px;
+        }
+        #submit{
+            margin-left: 20px;
+        }
