@@ -1,4 +1,4 @@
-# finance
+# Finance
 
 > 💰 A simple finance-related web application built with HTML & Node.js
 
@@ -33,3 +33,4 @@ npm install
 
 # Start the server
 npm start
+
