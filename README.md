@@ -19,7 +19,6 @@
 
 ### Prerequisites  
 - [Node.js](https://nodejs.org/) installed (version 14.x / 16.x / or latest LTS)  
-- (If you have a `.env` file — add environment variables as needed.)
 
 ### Installation & Setup  
 
@@ -33,4 +32,5 @@ npm install
 
 # Start the server
 npm start
+
 
